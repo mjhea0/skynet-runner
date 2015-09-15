@@ -7,8 +7,10 @@ var skynetScore = 0;
 var roundCounter = 0; // prevent an infinite loop
 var playerNumbersUsed = [];
 var skynetNumbersUsed = [];
-var playerNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var skynetNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var playerNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                            12, 13, 14, 15, 16, 17, 18, 19, 20];
+var skynetNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                            12, 13, 14, 15, 16, 17, 18, 19, 20];
 
 
 function computeScore(playerAnswer, skynetAnswer) {
@@ -39,8 +41,10 @@ function resetBoard() {
   roundCounter = 0;
   playerNumbersUsed = [];
   skynetNumbersUsed = [];
-  playerNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  skynetNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  playerNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                            12, 13, 14, 15, 16, 17, 18, 19, 20];
+  skynetNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
+                            12, 13, 14, 15, 16, 17, 18, 19, 20];
 }
 
 
@@ -48,9 +52,9 @@ function resetBoard() {
 
 function playDaGame(playerAnswerFromForm) {
   var playerAnswer = parseInt(playerAnswerFromForm);
-  var index = playerNumbersRemaining.indexOf(playerAnswer);
-  playerNumbersRemaining.splice(index, 1);
-  console.log(playerNumbersRemaining);
+  var playerIndex = playerNumbersRemaining.indexOf(playerAnswer);
+  playerNumbersRemaining.splice(playerIndex, 1);
+
   var skynetAnswer = skynetAlgorithm(
     skynetNumbersUsed,
     skynetNumbersRemaining,
@@ -58,6 +62,10 @@ function playDaGame(playerAnswerFromForm) {
     skynetScore,
     playerScore
   );
+
+  var skynetIndex = skynetNumbersRemaining.indexOf(skynetAnswer);
+  skynetNumbersRemaining.splice(skynetIndex, 1);
+
   playerNumbersUsed.push(playerAnswer);
   skynetNumbersUsed.push(skynetAnswer);
   computeScore(playerAnswer, skynetAnswer);
