@@ -55,10 +55,19 @@ function playDaGame(playerAnswerFromForm) {
   var playerIndex = playerNumbersRemaining.indexOf(playerAnswer);
   playerNumbersRemaining.splice(playerIndex, 1);
 
-  var skynetAnswer = skynetAlgorithm(
+  // var skynetAnswer = skynetAlgorithm(
+  //   skynetNumbersUsed,
+  //   skynetNumbersRemaining,
+  //   playerNumbersUsed,
+  //   skynetScore,
+  //   playerScore
+  // );
+
+  var skynetAnswer = bradleyAlgorithm(
     skynetNumbersUsed,
     skynetNumbersRemaining,
     playerNumbersUsed,
+    playerNumbersRemaining,
     skynetScore,
     playerScore
   );
