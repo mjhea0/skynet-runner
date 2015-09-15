@@ -15,9 +15,9 @@ var skynetNumbersRemaining = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
 
 function computeScore(playerAnswer, skynetAnswer) {
   if (playerAnswer + 1 === skynetAnswer) {
-    playerScore += 2;
-  } else if (skynetAnswer + 1 === playerAnswer) {
     skynetScore += 2;
+  } else if (skynetAnswer + 1 === playerAnswer) {
+    playerScore += 2;
   } else if (playerAnswer < skynetAnswer) {
     playerScore++;
   } else if (playerAnswer > skynetAnswer) {
