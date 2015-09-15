@@ -69,6 +69,7 @@ function playDaGame(playerAnswerFromForm) {
   playerNumbersUsed.push(playerAnswer);
   skynetNumbersUsed.push(skynetAnswer);
   computeScore(playerAnswer, skynetAnswer);
+  // add logic to determin winner and end game if no more numbers remain
   if (playerScore >= 5 || skynetScore >= 5) {
     roundCounter++;
     calculateWinner();
