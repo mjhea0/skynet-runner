@@ -1,0 +1,101 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="score-area col-sm-10 col-sm-offset-1">
+        <h1 class="text-center">Welcome to Skynet!</h1>
+        <hr><br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="player-corner col-sm-6">
+        <h2 class="text-center">Player Corner</h2>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Remaining</th>
+              <th>Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="player-numbers-remaining"></td>
+              <td id="player-numbers-used"></td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <form>
+          <div class="form-group">
+            <input type="number" id="user-number" class="form-control" placeholder="Enter a number" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+        <br>
+        <div id="alert"></div>
+      </div>
+      <div class="score-corner col-sm-4 col-sm-offset-2">
+        <h2 class="text-center">Score!</h2>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Current Player</th>
+              <th>Current Skynet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="player-current-score"></td>
+              <td id="skynet-current-score"></td>
+            </tr>
+          </tbody>
+        </table>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Overall Player</th>
+              <th>Overall Skynet</th>
+              <th>Overall Ties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="player-overall-score"></td>
+              <td id="skynet-overall-score"></td>
+              <td id="ties-overall-score"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="skynet-corner col-sm-6">
+        <h2 class="text-center">Skynet Corner</h2>
+        <br>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Remaining</th>
+              <th>Used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id="skynet-numbers-remaining"></td>
+              <td id="skynet-numbers-used"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
