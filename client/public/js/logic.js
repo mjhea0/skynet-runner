@@ -73,8 +73,8 @@ function playDaGame(playerAnswerFromForm) {
     roundCounter++;
     calculateWinner();
     resetBoard();
-    // console.log('Wins for player: ' + playerWins);
-    // console.log('Wins for skynet: ' + skynetWins);
-    // console.log('Ties: ' + ties);
+    console.log('Wins for player: ' + playerWins);
+    console.log('Wins for skynet: ' + skynetWins);
+    console.log('Ties: ' + ties);
   }
 }

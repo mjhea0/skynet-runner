@@ -47,7 +47,7 @@ function getAllNumbers() {
 function getAllScores() {
   $('#player-current-score').html(playerScore);
   $('#skynet-current-score').html(skynetScore);
-  $('#player-overall-score').html(skynetWins);
-  $('#skynet-overall-score').html(playerWins);
+  $('#player-overall-score').html(playerWins);
+  $('#skynet-overall-score').html(skynetWins);
   $('#ties-overall-score').html(ties);
 }
