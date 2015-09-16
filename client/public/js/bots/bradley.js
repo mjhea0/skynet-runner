@@ -70,6 +70,7 @@ function findBestLowNum(computerArray, playerArray){
           return number;
         }
       }
+      return number;
     }
   }
   return number;
@@ -87,5 +88,5 @@ function findBestHighNum(computerArray, playerArray, computerMoves, playerMoves)
       number = computerArray[i];
     }
   }
-    return number;
+  return number;
 }
