@@ -70,5 +70,5 @@ function getAllBots() {
 }
 
 function playAgain() {
-  $('#alert').html('<div class="alert alert-info" role="alert">We have a winner!</div>');
+  $('#alert').html('<div class="alert alert-info" role="alert">We have a winner (or a tie)!</div>');
 }
