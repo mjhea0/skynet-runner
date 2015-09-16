@@ -1,7 +1,6 @@
-// skynet algorithm (replace!)
+// skynet random algorithm
 
-
-function skynetAlgorithm(skynetNumbersUsed, skynetNumbersRemaining,
+function randomAlgorithm(skynetNumbersUsed, skynetNumbersRemaining,
   playerNumbersUsed, skynetScore, playerScore) {
   return skynetNumbersRemaining[Math.floor(
     Math.random() * skynetNumbersRemaining.length)];

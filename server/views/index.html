@@ -7,20 +7,22 @@
 
   <div class="container">
     <div class="row">
-      <div class="score-area col-sm-10 col-sm-offset-1">
+    <!-- header -->
+      <div class="col-sm-10 col-sm-offset-1">
         <h1 class="text-center">Welcome to Skynet!</h1>
         <hr><br>
       </div>
     </div>
     <div class="row">
+      <!-- player corner -->
       <div class="player-corner col-sm-6">
         <h2 class="text-center">Player Corner</h2>
         <br>
         <table class="table">
           <thead>
             <tr>
-              <th>Remaining</th>
-              <th>Used</th>
+              <th class="col-md-3">Remaining</th>
+              <th class="col-md-3">Used</th>
             </tr>
           </thead>
           <tbody>
@@ -31,15 +33,16 @@
           </tbody>
         </table>
         <br>
-        <form>
+        <form id="player-form">
           <div class="form-group">
             <input type="number" id="user-number" class="form-control" placeholder="Enter a number" required>
           </div>
-          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+          <button type="submit" class="btn btn-primary btn-block" disabled>Submit</button>
         </form>
         <br>
         <div id="alert"></div>
       </div>
+      <!-- score corner -->
       <div class="score-corner col-sm-4 col-sm-offset-2">
         <h2 class="text-center">Score!</h2>
         <br>
@@ -77,14 +80,15 @@
     </div>
     <br>
     <div class="row">
+      <!-- skynet corner -->
       <div class="skynet-corner col-sm-6">
         <h2 class="text-center">Skynet Corner</h2>
         <br>
         <table class="table">
           <thead>
             <tr>
-              <th>Remaining</th>
-              <th>Used</th>
+              <th class="col-md-3">Remaining</th>
+              <th class="col-md-3">Used</th>
             </tr>
           </thead>
           <tbody>
@@ -94,6 +98,17 @@
             </tr>
           </tbody>
         </table>
+      </div>
+      <!-- init corner -->
+      <div class="init-corner col-sm-6" id="init">
+        <h2 class="text-center">Skynet Corner</h2>
+        <h3>Welcome<br><small>Please choose a bot...</small></h3>
+        <form id="init-form">
+          <div class="form-group">
+            <select class="form-control" id="bot-select"></select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
       </div>
     </div>
   </div>

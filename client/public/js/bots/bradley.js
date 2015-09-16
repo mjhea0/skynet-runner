@@ -1,10 +1,10 @@
 function bradleyAlgorithm(
-  skynetNumbersUsed, // array of computer numbers used
-  skynetNumbersRemaining,  // array of computer numbers remaining
-  playerNumbersUsed, // array of player numbers used
-  playerNumbersRemaining, // array of player numbers remaining
-  skynetScore, // computer score
-  playerScore // player score
+  skynetNumbersUsed,
+  skynetNumbersRemaining,
+  playerNumbersUsed,
+  playerNumbersRemaining,
+  skynetScore,
+  playerScore
 ){
   var computerNumberBeingPlayed = nextMove();
   removeNums(playerNumbersUsed, computerNumberBeingPlayed);
@@ -13,10 +13,8 @@ function bradleyAlgorithm(
 
 function removeNums(playerNum, computerNum){
 
-  var playerArrayForLogic = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-                            12, 13, 14, 15, 16, 17, 18, 19, 20];
-  var computerArrayForLogic = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-                            12, 13, 14, 15, 16, 17, 18, 19, 20];
+  var playerArrayForLogic = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var computerArrayForLogic = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   for (var i = 0; i < playerArrayForLogic.length; i++) {
     for (var j = 0; j < playerNumbersUsed.length; j++) {
@@ -26,9 +24,9 @@ function removeNums(playerNum, computerNum){
     }
   }
 
-  for (var i = 0; i < computerArrayForLogic.length; i++) {
-    for (var j = 0; j < skynetNumbersUsed.length; j++) {
-      if (skynetNumbersUsed[j] === computerArrayForLogic[i]){
+  for (var k = 0; k < computerArrayForLogic.length; k++) {
+    for (var l = 0; l < skynetNumbersUsed.length; l++) {
+      if (skynetNumbersUsed[l] === computerArrayForLogic[k]){
         computerArrayForLogic.splice(playerIndex, 1, 'removed');
       }
     }

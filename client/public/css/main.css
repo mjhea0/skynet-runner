@@ -10,3 +10,7 @@ a {
 .score-corner {
   background-color: #f5f5f5;
 }
+
+.skynet-corner {
+  display: none;
+}

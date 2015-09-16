@@ -3,9 +3,10 @@
 $(document).on('ready', function() {
   getAllNumbers();
   getAllScores();
+  getAllBots();
 });
 
-$('form').on('submit', function(event){
+$('#player-form').on('submit', function(event){
   event.preventDefault();
   $('#alert').html('');
   var $userInputtedNumber = $('#user-number').val();
@@ -13,10 +14,19 @@ $('form').on('submit', function(event){
     $('#alert').html('<div class="alert alert-danger" role="alert">Please try again!</div>');
   } else {
     $('#user-number').val('');
-    playDaGame($userInputtedNumber);
+    playDaGame($userInputtedNumber, $('#player-form').attr('data-bot'));
     getAllNumbers();
     getAllScores();
   }
+});
+
+$('#init-form').on('submit', function(event){
+  event.preventDefault();
+  var $userSelectedBot = $("#bot-select option:selected" ).text();
+  $('#init').hide();
+  $('.skynet-corner').show();
+  $('#player-form').attr('data-bot', $userSelectedBot);
+  $('#player-form button').prop('disabled', false);
 });
 
 // *** helpers *** //
@@ -50,4 +60,15 @@ function getAllScores() {
   $('#player-overall-score').html(playerWins);
   $('#skynet-overall-score').html(skynetWins);
   $('#ties-overall-score').html(ties);
+}
+
+function getAllBots() {
+  allBotsArray = ['random', 'bradley'];
+  for (var i = 0; i < allBotsArray.length; i++) {
+    $('#bot-select').append('<option>'+allBotsArray[i]+'</option>');
+  }
+}
+
+function playAgain() {
+  $('#alert').html('<div class="alert alert-info" role="alert">We have a winner!</div>');
 }
